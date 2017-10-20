@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmokeAlerter.MasterPage"
+             Title="SmokeAlerter">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Let's Smoke!" BackgroundColor="Red" TextColor="White" HorizontalOptions="Center" VerticalOptions="End" Clicked="OnSmoke"/>
+            <Button Text="Manage Groups" BackgroundColor="Gray" TextColor="White" HorizontalOptions="Center" VerticalOptions="End" Clicked="OnGroupMngmt"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

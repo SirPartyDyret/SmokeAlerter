@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmokeAlerter.GroupsPage"
+             Title="My Groups">
+    <ContentPage.Content>
+        <ListView x:Name="groupListView" RowHeight="60" ItemTapped="OnGroupSelected">
+            <ListView.Header>
+                <StackLayout BackgroundColor="Black" Padding="5">
+                    <Button Text="Add Group" TextColor="Black" FontSize="Large" BackgroundColor="White" Clicked="AddGroup_Clicked" HorizontalOptions="Center"/>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Label Text="{Binding groupName}" FontSize="Medium" TextColor="Black"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout Orientation="Vertical" Padding="20">
+                    <Button x:Name="editGroupButton" Text="Edit Group" Clicked="EditGroup_Clicked" IsEnabled="False"/>
+                    <Button x:Name="deleteGroupButton" Text="Delete Group" Clicked="DeleteGroup_Clicked" BackgroundColor="Red" IsEnabled="False"/>
+                </StackLayout>
+            </ListView.Footer>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

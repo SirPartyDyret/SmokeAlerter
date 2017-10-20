@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmokeAlerter.EditGroupOptionsPage"
+             Title="Edit Group">
+    <ContentPage.Content>
+        <ListView x:Name="editGroupsListView" RowHeight="60">
+            <ListView.Header>
+                <StackLayout Padding="5">
+                    <Label Text="Group Name: " FontSize="Medium" TextColor="Black"/>
+                    <Entry Placeholder="Group Name" x:Name="editGroupNameEntry"/>
+                    <Label Text="ass" x:Name="groupMembersLabel" TextColor="Black"/>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Label Text="Asas"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout Orientation="Vertical" Padding="20">
+                    <Button Text="Add Members" BackgroundColor="Gray" Clicked="AddMembers_Clicked"/>
+                    <Button Text="Remove Members" BackgroundColor="Pink" Clicked="RemoveMembers_Clicked"/>
+                    <Button Text="Save Changes" Clicked="SaveChanges_Clicked"/>
+                    <Button Text="Delete Group" BackgroundColor="Red" Clicked="DeleteGroup_Clicked"/>
+                </StackLayout>
+            </ListView.Footer>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
